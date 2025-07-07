@@ -50,3 +50,43 @@ Esta es una API REST construida con **Node.js** y **Express**, que permite gesti
 ```bash
 git clone https://github.com/tu-usuario/api-empleados.git
 cd api-empleados
+
+2. **Instala las dependencias**
+
+```bash
+npm install
+
+3. **Crea un archivo .env en la raíz del proyecto**
+
+```ini
+PORT=3000
+
+4. **Ejecuta el servidor**
+
+```bash
+En modo desarrollo (requiere nodemon):
+npm run dev
+
+```bash
+En modo producción:
+npm start
+
+5. **Prueba los endpoints**
+
+```bash
+Abre Postman o tu navegador y realiza peticiones como:
+
+➕ Crear empleado
+POST /empleados
+POST http://localhost:3000/empleados
+
+Body (JSON):
+```json
+{
+  "nombre": "Ana Pérez",
+  "edad": 35,
+  "puesto": "Contadora",
+  "departamento": "Contabilidad"
+}
+
+
