@@ -19,12 +19,12 @@ const validarEmpleado = (data, esActualizacion = false) => {
         }
     }
 
-    if (!parcial || data.departamento !== undefined) {
+    if (!esActualizacion || data.departamento !== undefined) {
         if (!data.departamento || typeof data.departamento !== 'string' || data.departamento.trim().length === 0) {
             errores.push('El departamento es requerido.');
         }
     }
-    
+
     return errores;
 };
 module.exports = validarEmpleado;
