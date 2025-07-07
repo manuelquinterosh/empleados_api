@@ -19,7 +19,4 @@ app.use((req, res) => {
     res.status(404).json({ error: 'Ruta no encontrada' });
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor http://localhost:${PORT}`);
-})
-
+module.exports = app;
