@@ -34,6 +34,7 @@ Esta es una API REST construida con **Node.js** y **Express**, que permite gesti
 │   └── 📄 errorHandler.js
 ├── 📁 utils
 │   └── 📄 validarEmpleado.js
+│   └── 📄 messages.js
 ├── 📄 .env
 ├── 📄 .gitignore
 ├── 📄 package.json
