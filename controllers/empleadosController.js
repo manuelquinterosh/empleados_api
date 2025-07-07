@@ -8,6 +8,7 @@ const {
 } = require('../services/empleadosService');
 
 const validarEmpleado = require('../utils/validarEmpleado');
+const mensajes = require('../utils/messages');
 
 const crearEmpleado = async (req, res) => {
    const errores = validarEmpleado(req.body);
@@ -17,9 +18,9 @@ const crearEmpleado = async (req, res) => {
    }
     try {
         const empleado = await agregarEmpleado(req.body);
-        res.status(201).json(empleado);
+        res.status(201).json({ mensaje: mensajes.crearEmpleado.success, empleado });
     } catch (error) {
-        res.status(500).json({ error:'Error al crear empleado.'});
+        res.status(500).json({ error: mensajes.crearEmpleado.error });
     }
 };
 
@@ -29,7 +30,7 @@ const listarEmpleados = async (req, res) => {
        const empleados = await obtenerEmpleados(filtros);
        res.json(empleados);
     } catch (error) {
-       res.status(500).json({ error: 'Error al obtener empleados.'});
+       res.status(500).json({ error: mensajes.listarEmpleados.error });
     }
 };
 
@@ -38,7 +39,7 @@ const listarMayores = async (req, res) => {
        const mayores = await obtenerMayoresDe(30);
        res.json(mayores);
     } catch (error){
-        res.status(500).json({ error: 'Error al obtener empleados mayores de 30.'});
+        res.status(500).json({ error: mensajes.listarMayores.error });
     }
 };
 
@@ -56,7 +57,7 @@ const actualizarEmpleadoController = async (req, res) => {
         const actualizado = await actualizarEmpleado(id, datos);
         res.json(actualizado);
     } catch (error) {
-        res.status(error.code || 500).json({ error: error.message || 'Error al actualizar empleado.'});
+        res.status(error.code || 500).json({ error: error.message || mensajes.actualizarEmpleado.error });
     }
 }
 
@@ -65,9 +66,9 @@ const eliminarEmpleadoController = async (req, res) => {
 
     try {
         await eliminarEmpleado(id);
-        res.json({ mensaje: 'Empleado eliminado correctamente.'});
+        res.json({ mensaje: mensajes.eliminarEmpleado.success });
     } catch (error) {
-        res.status(error.code || 500).json({ error: error.message || 'Error al eliminar empleado.'});
+        res.status(error.code || 500).json({ error: error.message || mensajes.eliminarEmpleado.error });
     }
 };
 
@@ -76,7 +77,7 @@ const getEstadisticas = async (req, res) => {
        const stats = await obtenerEstadisticas();
        res.json(stats);
     } catch (error) {
-       res.status(500).json({ error: 'Error al calcular estadisticas.'});
+       res.status(500).json({ error: mensajes.estadisticas.error });
     }
 };
 
