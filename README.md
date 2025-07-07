@@ -13,27 +13,26 @@ Esta es una API REST construida con **Node.js** y **Express**, que permite gesti
 
 ## 🗂 Estructura del Proyecto
 
-📁 .
-├── 📄 app.js
-├── 📄 server.js
-├── 📁 data
-│ └── 📄 empleados.json
-├── 📁 controllers
-│ └── 📄 empleadosController.js
-├── 📁 routes
-│ └── 📄 empleadosRoutes.js
-├── 📁 services
-│ └── 📄 empleadosService.js
-├── 📁 middlewares
-│ ├── 📄 logger.js
-│ └── 📄 errorHandler.js
-├── 📁 utils
-│ └── 📄 validarEmpleado.js
-├── 📄 .env
-├── 📄 .gitignore
-├── 📄 package.json
-└── 📄 README.md
-
+- 📁 .
+  - 📄 app.js
+  - 📄 server.js
+  - 📁 data
+    - 📄 empleados.json
+  - 📁 controllers
+    - 📄 empleadosController.js
+  - 📁 routes
+    - 📄 empleadosRoutes.js
+  - 📁 services
+    - 📄 empleadosService.js
+  - 📁 middlewares
+    - 📄 logger.js
+    - 📄 errorHandler.js
+  - 📁 utils
+    - 📄 validarEmpleado.js
+  - 📄 .env
+  - 📄 .gitignore
+  - 📄 package.json
+  - 📄 README.md
 
 ## 🚀 Instalación y Uso
 
