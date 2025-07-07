@@ -179,4 +179,4 @@ MIT © 2025 Manuel Quinteros
 
 ## 🙌 Autor
 
-Desarrollado por Manuel Quinteros – [manuelq_hernandez@outlook.com]
+Desarrollado por Manuel Quinteros – manuelq_hernandez@outlook.com
