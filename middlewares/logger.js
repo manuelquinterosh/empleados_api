@@ -5,3 +5,4 @@ const logger = (req, res, next) => {
     console.log(`[${timestamp}] ${metodo} ${ruta}`);
     next();
 }
+module.exports = logger;
