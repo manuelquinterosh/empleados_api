@@ -62,7 +62,6 @@ npm install
 
 ```ini
 PORT=3000
-JSON_DB_PATH=./data/empleados.json
 ```
 
 ### 4. Ejecuta el servidor
@@ -174,10 +173,10 @@ GET http://localhost:3000/estadisticas
 
 ## 📄 Licencia
 
-MIT © 2025 [Manuel Quinteros]
+MIT © 2025 Manuel Quinteros
 
 ---
 
 ## 🙌 Autor
 
-Desarrollado por [Manuel Quinteros] – [manuelq_hernandez@outlook.com]
+Desarrollado por Manuel Quinteros – [manuelq_hernandez@outlook.com]
